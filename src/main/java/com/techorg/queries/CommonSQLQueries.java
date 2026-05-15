@@ -13,4 +13,8 @@ public interface CommonSQLQueries {
 
     String UPDATE_EMPLOYEE_BY_ID = "Update Employee set DepartmentID = ? where EmployeeID = ?";
 
+    String GET_EMPLOYEE_BY_ID= "select emp.EmployeeId, emp.Name, emp.Email, emp.Designation, dept.Name" +
+            " from Employee emp inner join Department dept on emp.DepartmentID = dept.departmentID" +
+            " where emp.EmployeeId = ?";
+
 }
